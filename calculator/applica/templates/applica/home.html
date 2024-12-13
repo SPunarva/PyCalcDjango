@@ -1,0 +1,26 @@
+{% extends 'applica/base.html' %}
+
+{% block content %}
+
+
+<form action="calculate" method="post">
+    {% csrf_token %}
+    <label style="color: #EFB6C8">Enter First Number:</label>
+    <input type="text" name="num1" required><br><br>
+
+    <label style="color: #EFB6C8";>Enter Second Number:</label>
+    <input type="text" name="num2" required><br><br>
+
+    <label style="color: #EFB6C8";>Select Operation:</label>
+    <select name="operation" required>
+        <option value="add">Addition</option>
+        <option value="subtract">Subtraction</option>
+        <option value="multiply">Multiplication</option>
+        <option value="divide">Division</option>
+    </select><br><br>
+
+    <input type="submit" value="Calculate">
+</form>
+
+{% endblock %}
+
